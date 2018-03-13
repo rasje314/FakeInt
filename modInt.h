@@ -7,7 +7,11 @@ using namespace std;
 class modInt
 {
 public:
-	modInt(int, int(*)(int));
+	modInt(int a, int(*b)(int) = nullptr)
+	{
+		baseNumber = a;
+		functionPtr = b;
+	}
 
 	friend ostream& operator<<(ostream&, const modInt&);
 
